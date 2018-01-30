@@ -1,0 +1,17 @@
+<h2>Details about {{ pet_name }}</h2>
+<a id="new" [routerLink]="['']">Home</a>
+<p>Pet Type :
+    <span> {{ pet.type }} </span>
+</p>
+<p>Description :
+    <span> {{ pet.description }} </span>
+</p>
+<p>Skills :
+    <span class="skill" *ngFor="let skill of pet.skills">
+        <br> {{ skill.skill }} </span>
+</p>
+<p> Likes :
+    <span> {{ pet.likes }} </span>
+</p>
+<button (click)="addLikes(pet._id)" [disabled]="like">Like this pet</button>
+<button (click)="destroyPet(pet._id)">Adopt this pet!</button>

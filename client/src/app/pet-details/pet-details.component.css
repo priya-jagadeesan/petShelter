@@ -1,0 +1,44 @@
+h2{
+    display: inline-block
+}
+a{
+    margin-left: 400px;
+    font-size: 1.6em;
+    display: inline-block;
+}
+
+p{
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+
+span,.skill{
+    margin-left: 20px;
+    font-weight: normal;
+    font-size: 1em;
+}
+
+.skill{
+    padding-left: 30px;
+}
+
+button{
+    background-color: lightslategray;
+    display: inline-block;
+    color: white;
+    font-size: 0.8em;
+    border-radius: 3px;
+    display: absolute;
+    width: 150px;
+    height: 20px;
+    /* margin: 30px; */
+    /* margin-left: 500px; */
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}

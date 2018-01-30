@@ -1,0 +1,24 @@
+<p *ngIf="delOrRetrErrors">{{ delOrRetrErrors }}</p>
+<div class='list'>
+  <h2>These pets are looking for a home</h2>
+  <a id="new" [routerLink]="['new']">Add a pet to the shelter</a>
+  <table>
+    <thead>
+      <tr>
+        <th class="head">Name</th>
+        <th class="head">Type</th>
+        <th class="head">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="pet" *ngFor="let pet of pets">
+        <td>{{ pet.name }}</td>
+        <td>{{ pet.type }}</td>
+        <td>
+          <button (click)="getPetDetails(pet._id)">Details</button>
+          <button (click)="updatePet(pet)">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,39 @@
+<h2>Know of a pet needing a home?</h2>
+
+<form style="display:inherit" (submit)="createPet()">
+  <label for="new_Pet.name">Pet Name :</label>
+  <br>
+  <input type="text" name="new_Pet.name" [(ngModel)]="new_Pet.name" />
+  <br>
+  <p class="error" *ngIf="new_nameErrors">
+    {{ new_nameErrors }}
+  </p>
+  <label for="new_Pet.type">Pet Type :</label>
+  <br>
+  <input type="text" name="new_Pet.type" [(ngModel)]="new_Pet.type" />
+  <br>
+  <p class="error" *ngIf="new_typeErrors">
+    {{ new_typeErrors }}
+  </p>
+  <br>
+  <label for="new_Pet.description">Description :</label>
+  <br>
+  <input type="text" name="new_Pet.description" [(ngModel)]="new_Pet.description" />
+  <br>
+  <p class="error" *ngIf="new_descErrors">
+    {{ new_descErrors }}
+  </p>
+  <br>
+  <label for="new_Pet.description">Skills (optional) :</label>
+  <br> Skill 1:
+  <input class="skill" type="text" name="new_Pet.skill1" [(ngModel)]="new_Pet.skill1" />
+  <br> Skill 2:
+  <input class="skill" type="text" name="new_Pet.skill2" [(ngModel)]="new_Pet.skill2" />
+  <br> Skill 3:
+  <input class="skill" type="text" name="new_Pet.skill3" [(ngModel)]="new_Pet.skill3" />
+  <br>
+  <br>
+  <br>
+  <input id="submit" type="submit" value="Add Pet">
+</form>
+<button style="display:inline-block" (click)="onCancel()">Cancel</button>

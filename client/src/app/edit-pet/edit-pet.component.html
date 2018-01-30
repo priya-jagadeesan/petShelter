@@ -1,0 +1,38 @@
+<h2>Edit this pet</h2>
+<form style="display:inherit" (submit)="updatePet()">
+  <label for="editPet.name">Pet Name :</label>
+  <br>
+  <input type="text" name="editPet.name" [(ngModel)]="editPet.name" />
+  <br>
+  <p class="error" *ngIf="new_nameErrors">
+    {{ new_nameErrors }}
+  </p>
+  <label for="editPet.type">Pet Type :</label>
+  <br>
+  <input type="text" name="editPet.type" [(ngModel)]="editPet.type" />
+  <br>
+  <p class="error" *ngIf="new_typeErrors">
+    {{ new_typeErrors }}
+  </p>
+  <br>
+  <label for="editPet.description">Description :</label>
+  <br>
+  <input type="text" name="editPet.description" [(ngModel)]="editPet.description" />
+  <br>
+  <p class="error" *ngIf="new_descErrors">
+    {{ new_descErrors }}
+  </p>
+  <br>
+  <label for="editPet.description">Skills (optional) :</label>
+  <br> Skill 1:
+  <input class="skill" type="text" name="editPet['skills'][0]['skill']" [(ngModel)]="editPet['skills'][0]['skill']" />
+  <br> Skill 2:
+  <input class="skill" type="text" name="editPet['skills'][1]['skill']" [(ngModel)]="editPet['skills'][1]['skill']" />
+  <br> Skill 3:
+  <input class="skill" type="text" name="editPet['skills'][2]['skill']" [(ngModel)]="editPet['skills'][2]['skill']" />
+  <br>
+  <br>
+  <br>
+  <input id="submit" type="submit" value="Edit Pet">
+</form>
+<button style="display:inline-block" (click)="onCancel()">Cancel</button>
