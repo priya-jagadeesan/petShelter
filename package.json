@@ -11,8 +11,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.2",
     "body-parser": "^1.18.2",
-    "mongoose": "^4.13.9"
+    "express": "^4.16.2",
+    "mongoose": "^4.13.9",
+    "ssri": "^5.3.0"
   }
 }
